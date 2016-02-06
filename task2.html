@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>task 2</title>
+</head>
+<body>
+<p>please entere the following components to complete the registration</p>
+<form id="form1">
+name:<br>
+<input type="text" value="nick"><br>
+nick name:<br>
+<input type="text" value="name"><br>
+email:<br>
+<input type="text" value="email"><br>
+gender:
+<select>
+	<option>male</option>
+	<option selected>female</option>
+	<option>trans</option>
+</select><br>
+</form>
+<button onclick="fun1()">submit</button>
+<p id="p1"></p>
+<script>
+function fun1(){
+	var x=document.getElementById("form1");
+	var y="HI!! ";
+	y+=x.elements[0].value+"<br>";
+	document.getElementById("p1").innerHTML=y;
+}
+</script>
+</body>
+</html>
