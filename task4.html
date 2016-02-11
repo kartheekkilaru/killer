@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<title>task4</title>
+<!--there r no comments in CSS (style) so i am writing here.
+if we dont use linear in animation, there will be acceleration in the motion.-->
+<!--for div elements, if we use color instead of background-color, then, there wont be any color in the division-->
+<!--in animation, rotate() indicates the angle of revolution, translate(150px) defines the radius of revolution, and rotate defines the angle of rotation.-->
+<!--we can also use 0% instead of from and 100% instead of to.-->
+<!--we can introdue the % completion of animation by inroducing % in between 0% and 100%-->
+<!--here rotate is rotateZ() we can also use rotateX() and rotateY() to change the axis of rotation. similarly with translate.-->
+<style>
+.circle1{
+	position:absolute;
+	width:200px;
+	height:200px;
+	left:300px;
+	top:200px;
+	border-radius:100px;
+	background-color:orange;
+}
+.circle2{
+	position:absolute;
+	width:100px;
+	height:100px;
+	left:350px;
+	top:250px;
+	border-radius:50px;
+	background-color:yellow;
+	animation: rotate1 5s linear infinite;
+}
+.circle3{
+	position:absolute;
+	width:100px;
+	height:100px;
+	left:350px;
+	top:250px;
+	border-radius:50px;
+	background-color:yellow;
+	animation: rotate2 5s linear infinite;
+}
+@keyframes rotate1{
+	0%{transform: rotate(0deg) translate(150px);}
+	25%{transform: rotate(-90deg) translate(150px); background-color:red;}
+	50%{transform: rotate(-180deg) translate(150px); background-color:blue;}
+	75%{transform: rotate(-270deg) translate(150px); background-color:green;}
+	100%{transform:rotate(-360deg) translate(150px);}
+}
+@keyframes rotate2{
+	0%{transform: rotate(0deg) translate(-150px);}
+	25%{transform: rotate(90deg) translate(-150px); background-color:red;}
+	50%{transform: rotate(180deg) translate(-150px); background-color:blue;}
+	75%{transform: rotate(270deg) translate(-150px); background-color:green;}
+	100%{transform:rotate(360deg) translate(-150px);}
+}
+</style>
+</head>
+<body>
+	<div class="circle1"></div>
+	<div class="circle2"></div>
+	<div class="circle3"></div>
+</body>
+</html>
